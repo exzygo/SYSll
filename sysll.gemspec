@@ -5,7 +5,7 @@ Gem::Specification.new do |s|
   s.description = "Build your code for multiple platforms easily with the sysll gem"
   s.authors = ["fasmagoric"]
   s.email = "fasmagoric.dev@gmail.com"
-  s.files = ["lib/sysll.rb", "lib/sysverify.rbm", "lib/cmd.rb"]
+  s.files = ["lib/sysll.rb", "lib/sysverify.rb", "lib/cmd.rb"]
   s.homepage = "https://github.com/fasmagoric/SYSll"
   s.metadata = {
     "homepage_uri" => "https://github.com/fasmagoric/SYSll",
