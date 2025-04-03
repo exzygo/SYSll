@@ -1,73 +1,30 @@
 require_relative 'sysverify'
+require_relative 'cmd'
 
-class SYSll
-  def self.clear
-    case VERIFY.os
-    when :windows
-      system('cls')
-    else
-      system('clear')
+module SYSll
+  class CALL 
+    def self.clear
+      CMD::CALL.clear
     end
+
+    def self.list_files(flags = nil)
+      CMD::CALL.list_files(flags)
+    end
+
+    def self.network_info
+      CMD::CALL.network_info
+    end
+
+    def self.process_info
+      CMD::CALL.process_info
+    end
+
+    def self.kill_process(pid, flag = nil)
+      CMD::CALL.kill_process(pid, flag)
+    end
+
+    def self.sys(flags = nil)
+      CMD::CALL.sys(flags)
+    end 
   end
-
-  def self.list_files(flags = nil)
-    case VERIFY.os
-    when :windows
-      system('dir')
-    else
-      if flags.nil?
-        system("ls")
-      else
-        system("ls #{flags}")
-      end
-    end
-  end
-
-  def self.network_info
-    case VERIFY.os
-    when :windows
-      system('ipconfig')
-    else 
-      system('ifconfig')
-    end
-  end
-
-  def self.process_info
-    case VERIFY.os
-    when :windows
-      system("tasklist")
-    else 
-      system("ps aux")
-    end
-  end
-
-  def self.kill_process(pid, flag = nil)
-    case VERIFY.os
-    when :windows
-      if flags.nil?  
-        system("taskkill /PID #{pid}")
-      else 
-        system("taskkill /PID #{pid} #{flag}")
-      end
-    else
-      if flags.nil?
-        system("kill #{pid}")
-      else 
-        system("kill #{flag} #{pid}")
-      end
-    end
-  end
-
-  def self.sys(flags = nil)
-    case VERIFY.os
-    when :windows
-      system("systeminfo")
-    else
-      if flags.nil? 
-        system("uname")
-      else
-        system("uname #{flags}")
-      end
-    end
-  end 
 end
