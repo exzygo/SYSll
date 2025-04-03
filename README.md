@@ -79,7 +79,7 @@ bundle install
 ```
 and to build and push:
 
-```
+```ruby
 gem build sysll.gemspec
 gem push sysll-0.1.0.gem
 ```
