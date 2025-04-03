@@ -44,26 +44,26 @@ gem install sysll
 require 'sysll'
 
 # Clear terminal
-SYSll.clear
+SYSll::CALL.clear
 
 # List files (with optional flags on Unix systems)
-SYSll.list_files
-SYSll.list_files('-la')
+SYSll::CALL.list_files
+SYSll::CALL.list_files('-la')
 
 # Show network info
-SYSll.network_info
+SYSll::CALL.network_info
 
 # Show process info
-SYSll.process_info
+SYSll::CALL.process_info
 
 # Kill a process by PID (with flags)
-SYSll.kill_process(1234)
-SYSll.kill_process(1234, '/F') # For WINDOWS systems
-SYSll.kill_process(1234, '-9') # For UNIX systems
+SYSll::CALL.kill_process(1234)
+SYSll::CALL.kill_process(1234, '/F') # For WINDOWS systems
+SYSll::CALL.kill_process(1234, '-9') # For UNIX systems
 
 # System information (with opitional flags on Unix systems)
-SYSll.sys
-SYSll.sys('-a')
+SYSll::CALL.sys
+SYSll::CALL.sys('-a')
 ```
 
 <br>
