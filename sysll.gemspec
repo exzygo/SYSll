@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name = "sysll"
-  s.version = "0.1.1"
+  s.version = "0.1.2"
   s.summary = "Build your code for multiple platforms easily with the sysll gem"
   s.description = "Build your code for multiple platforms easily with the sysll gem"
   s.authors = ["mvghasty"]
