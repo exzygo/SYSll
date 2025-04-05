@@ -27,4 +27,30 @@ module SYSll
       CMD::CALL.sys(flags)
     end 
   end
+
+  class KERNEL
+    def self.clear
+      CMD::KERNEL.clear
+    end
+
+    def self.list_files(flags = nil)
+      CMD::KERNEL.list_files(flags)
+    end
+
+    def self.network_info
+      CMD::KERNEL.network_info
+    end
+
+    def self.process_info
+      CMD::KERNEL.process_info
+    end
+
+    def self.kill_process(pid, flag = nil)
+      CMD::KERNEL.kill_process(pid, flag)
+    end
+
+    def self.sys(flags = nil)
+      CMD::KERNEL.sys(flags)
+    end 
+  end
 end
