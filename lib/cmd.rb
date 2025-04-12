@@ -100,7 +100,7 @@ module CMD
                   else
                     uname_delimiters = ["\n", " "] 
                     reguname = Regexp.union(uname_delimiters)
-                    return Kernel.`("uname #{flags}").split(reguname)
+                    Kernel.`("uname #{flags}").split(reguname)
                   end
                 end
       return krn_sys
