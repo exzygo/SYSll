@@ -38,7 +38,23 @@ gem install sysll
 
 <br>
 
+# ARCHITECTURE
+
+The architecture is modular and static, designed for reusability and maintainability.
+
+## Module: SYSll
+
+This is the gem’s entry point. It exposes two main classes:
+
+ - **SYSll::CALL** = Executes system commands using system, with direct terminal output
+
+ - **SYSll::KERNEL** = Return the commands using `cmd`, communicating directly with the kernel and returning the output in an array or a string parsed and formated.
+
+<br>
+
 # USAGE
+
+## SYSll::CALL examples
 
 ```ruby
 require 'sysll'
