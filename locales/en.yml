@@ -1,0 +1,38 @@
+en:
+  sysll:
+    status:
+      clear: "Cleared the screen successfully."
+      list_files: "Listing files in the current directory..."
+      network_info: "Fetching network configuration..."
+      process_info: "Retrieving running processes..."
+      kill_process: "Trying to kill process %{pid}..."
+      sys: "Getting system information..."
+    errors:
+      list_files_failed:
+        code: "SYSLL - E001"
+        message: "Failed to list files. Check permissions or flags."
+        type: "PermissionError"
+      network_info_failed:
+        code: "SYSLL - E002"
+        message: "Could not retrieve network info."
+        type: "NetworkError"
+      process_info_failed:
+        code: "SYSLL - E003"
+        message: "Error retrieving process information."
+        type: "ProcessError"
+      kill_process_failed:
+        code: "SYSLL - E004"
+        message: "Could not kill process %{pid}."
+        type: "ProcessError"
+      sys_failed:
+        code: "SYSLL - E005"
+        message: "Could not retrieve system information."
+        type: "SystemError"
+      clear_failed:
+        code: "SYSLL - E006"
+        message: "Failed to clear the terminal screen."
+        type: "SystemCommandError"
+      unknown_error:
+        code: "SYSLL - E999"
+        message: "An unknown error occurred."
+        type: "UnknownError"

@@ -1,5 +1,10 @@
 require_relative 'sysverify'
 require_relative 'cmd'
+require 'i18n'
+
+local_path = File.expand_path("../../locales/*.yml", __FILE__)
+I18n.load_path += Dir[local_path]
+I18n.default_locale = :en
 
 module SYSll
   class CALL 

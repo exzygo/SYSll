@@ -1,0 +1,38 @@
+pt:
+  sysll:
+    status:
+      clear: "Tela limpa com sucesso."
+      list_files: "Listando arquivos no diretório atual..."
+      network_info: "Obtendo informações da rede..."
+      process_info: "Recuperando processos em execução..."
+      kill_process: "Tentando encerrar o processo %{pid}..."
+      sys: "Obtendo informações do sistema..."
+    errors:
+      list_files_failed:
+        code: "SYSLL - E001"
+        message: "Falha ao listar os arquivos. Verifique permissões ou flags."
+        type: "ErroDePermissao"
+      network_info_failed:
+        code: "SYSLL - E002"
+        message: "Não foi possível obter informações da rede."
+        type: "ErroDeRede"
+      process_info_failed:
+        code: "SYSLL - E003"
+        message: "Erro ao recuperar informações dos processos."
+        type: "ErroDeProcesso"
+      kill_process_failed:
+        code: "SYSLL - E004"
+        message: "Não foi possível encerrar o processo %{pid}."
+        type: "ErroDeProcesso"
+      sys_failed:
+        code: "SYSLL - E005"
+        message: "Não foi possível obter informações do sistema."
+        type: "ErroDeSistema"
+      clear_failed:
+        code: "SYSLL - E006"
+        message: "Falha ao limpar a tela do terminal."
+        type: "ErroDeComandoDoSistema"
+      unknown_error:
+        code: "SYSLL - E999"
+        message: "Ocorreu um erro desconhecido."
+        type: "ErroDesconhecido"
