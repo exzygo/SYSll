@@ -84,9 +84,9 @@ module CMD
 
     def self.kill_process(pid, flag = nil)
       krn_kill = if SYSll::VERIFY.os == :windows
-                    flags.nil? ? Kernel.`("taskill /PID #{pid}").split(REGSPLIT) : Kernel.`("taskill /PID #{pid} #{flag}").split(REGSPLIT)
+                    flag.nil? ? Kernel.`("taskill /PID #{pid}").split(REGSPLIT) : Kernel.`("taskill /PID #{pid} #{flag}").split(REGSPLIT)
                  else
-                    flags.nil? ? Kernel.`("kill #{pid}").split(REGSPLIT) : Kernel.`("kill #{flag} #{pid}").split(REGSPLIT)
+                    flag.nil? ? Kernel.`("kill #{pid}").split(REGSPLIT) : Kernel.`("kill #{flag} #{pid}").split(REGSPLIT)
                  end
       return krn_kill
     end
