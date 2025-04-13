@@ -54,7 +54,7 @@ This is the gem’s entry point. It exposes two main classes:
 
 # USAGE
 
-## SYSll::CALL examples
+## SYSll::CALL usages
 
 ```ruby
 require 'sysll'
@@ -80,6 +80,43 @@ SYSll::CALL.kill_process(1234, '-9') # For UNIX systems
 # System information (with opitional flags on Unix systems)
 SYSll::CALL.sys
 SYSll::CALL.sys('-a')
+```
+
+## SYSll::KERNEL usages
+
+```ruby
+require 'sysll'
+
+clear = SYSll::KERNEL.clear
+print clear
+# OUTPUT: ["\e[H\e[2J\e[3J"]
+
+list_files = SYSll::KERNEL.list_files
+list_files_flag = SYSll::KERNEL.list_files('-la')
+my_folder = SYSll::KERNEL.list_files('-a')[4]
+
+print "Thats the list of files:\n"
+print list_files
+print "\n\nThats my test folder:\n"
+print my_folder
+print "\n\nThats the list of files with the flag '-la':\n"
+print list_files_flag
+# OUTPUT:
+# Thats the list of files:
+# ["Gemfile", "Gemfile.lock", "test_folder", "test.rb"]
+#
+# Thats my test folder:
+# test_folder
+#
+# Thats the list of files with the flag '-la':
+# ["total 12", "drwxr-xr-x. 1 mavic mavic  74 abr 13 11:48 .", "drwxr-xr-x. 1 mavic mavic 378 abr 13 05:54 ..", "-rw-r--r--. 1 mavic m
+# avic  43 abr 12 05:17 Gemfile", "-rw-r--r--. 1 mavic mavic 239 abr 13 11:33 Gemfile.lock", "drwxr-xr-x. 1 mavic mavic   0 abr 13 11:
+# 36 test_folder", "-rw-r--r--. 1 mavic mavic 337 abr 13 11:48 test.rb"]⏎                                                             
+ 
+my_os = SYSll::KERNEL.sys('-a')[0..1]
+print my_os
+# OUTPUT:
+# ["Linux", "fedora"]
 ```
 
 <br>
