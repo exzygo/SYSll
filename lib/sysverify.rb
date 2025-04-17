@@ -14,6 +14,8 @@ module SYSll
           :linux
         when /solaris|bsd|dragonfly/
           :bsd
+        when /android/
+          :android
         else
           raise Error::WebDriverError, "unknow os: #{host_os.inspect}"
         end
