@@ -5,7 +5,7 @@
   <a href='https://postimg.cc/vxZ5x9p2' target='center'><img src='https://i.postimg.cc/vxZ5x9p2/SYSll-removebg-preview.png' border='0' alt='SYSll-removebg-preview' width="250em"/></a>
 </div><br>
 
-**SYSll** is a robust Ruby gem offering a unified interface for executing low-level system commands across different operating systems, including Linux, macOS, Windows and Unix-based systems. It intelligently adapts commands based on the user’s OS, providing seamless cross-platform compatibility.
+**SYSll** is a robust Ruby gem offering a unified interface for executing low-level system commands across different operating systems, including Linux, macOS, Windows, Unix-based systems and Android. It intelligently adapts commands based on the user’s OS, providing seamless cross-platform compatibility.
 
 <br>
 
