@@ -93,7 +93,7 @@ module CMD
 
     def self.sys(flags = nil)
       krn_sys = if SYSll::VERIFY.os == :windows
-                  Kernel.`("systeminfo")
+                  Kernel.`("ruby utils/winame.rb")
                 else
                   if flags.nil? 
                     Kernel.`("uname").split(REGSPLIT)
